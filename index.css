@@ -75,7 +75,7 @@ form::before {
 
 
 form:hover {
-    background: rgba(255, 255, 255, 0.01);
+    /* background: rgba(255, 255, 255, 0.01); */
     border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 12px 40px 0 rgba(30, 30, 30, 0.24);
     backdrop-filter: blur(10px) saturate(100%);
@@ -138,6 +138,7 @@ form button {
     border: 1px solid rgba(255, 255, 255, 0);
     padding: 12px 16px;
     width: 30%;
+    min-width: 120px;
     color: rgba(255, 255, 255, 0.5);
     font-size: 16px;
     cursor: pointer;
