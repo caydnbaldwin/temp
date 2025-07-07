@@ -1,0 +1,198 @@
+header, nav {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.hero-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;   /* Center children horizontally */
+    justify-content: center;
+    width: 100%;
+    min-height: 60vh;      /* Optional: gives some vertical space */
+}
+
+.suggestions-section {
+    width: 80%;            /* Or your preferred width */
+    margin: 2rem auto 0 auto;
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    padding: 2rem;
+}
+
+.scale-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 3rem auto 0 auto;
+    text-align: center;
+}
+
+.scale-message {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #343a40;
+}
+
+.scale {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+
+.scale-bubble {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: var(--scale-bubble-bg);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 1.1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: background 0.2s;
+    z-index: 1;
+}
+
+.scale-bubble.selected {
+    background: var(--scale-bubble-selected-bg) !important;
+    outline: 3px solid var(--scale-bubble-selected-outline);
+    box-shadow: 0 0 0 4px rgba(67,160,71,0.15);
+    color: #fff !important;
+}
+
+.scale-line {
+    flex: 1;
+    height: 4px;
+    background: currentColor; /* <-- use the variable */
+    margin: 0 -2px;
+    z-index: 0;
+    border-radius: 2px;
+}
+
+/* Default (blue) */
+:root {
+    --scale-bubble-bg: #1758ba;
+    --scale-bubble-selected-bg: #1976d2;
+    --scale-bubble-selected-outline: #1976d2;
+    --scale-line-bg: #b6d4fe;
+    --calendar-highlight-bg: #1976d2;
+    --calendar-highlight-color: #fff;
+}
+
+/* Dark mode */
+body.dark-mode {
+    --scale-bubble-bg: #8ab4f8;
+    --scale-bubble-selected-bg: #1976d2;
+    --scale-bubble-selected-outline: #1976d2;
+    --scale-line-bg: #495057;
+    --calendar-highlight-bg: #1976d2;
+    --calendar-highlight-color: #fff;
+}
+
+/* Warm mode */
+body.warm-mode {
+    --scale-bubble-bg: #ffb300;
+    --scale-bubble-selected-bg: #ff9800;
+    --scale-bubble-selected-outline: #ff9800;
+    --scale-line-bg: #ffe082;
+    --calendar-highlight-bg: #ff9800;
+    --calendar-highlight-color: #fff;
+}
+
+/* Red mode */
+body.red-mode {
+    --scale-bubble-bg: #d32f2f;
+    --scale-bubble-selected-bg: #b71c1c;
+    --scale-bubble-selected-outline: #b71c1c;
+    --scale-line-bg: #ffcdd2;
+    --calendar-highlight-bg: #b71c1c;
+    --calendar-highlight-color: #fff;
+}
+
+/* Green mode */
+body.green-mode {
+    --scale-bubble-bg: #388e3c;
+    --scale-bubble-selected-bg: #2e7d32;
+    --scale-bubble-selected-outline: #2e7d32;
+    --scale-line-bg: #a5d6a7;
+    --calendar-highlight-bg: #2e7d32;
+    --calendar-highlight-color: #fff;
+}
+
+/* Purple mode */
+body.purple-mode {
+    --scale-bubble-bg: #8e24aa;
+    --scale-bubble-selected-bg: #6a1b9a;
+    --scale-bubble-selected-outline: #6a1b9a;
+    --scale-line-bg: #ce93d8;
+    --calendar-highlight-bg: #6a1b9a;
+    --calendar-highlight-color: #fff;
+}
+
+/* Deep blue mode */
+body.deep-blue-mode {
+    --scale-bubble-bg: #1565c0;
+    --scale-bubble-selected-bg: #0d47a1;
+    --scale-bubble-selected-outline: #0d47a1;
+    --scale-line-bg: #90caf9;
+    --calendar-highlight-bg: #0d47a1;
+    --calendar-highlight-color: #fff;
+}
+
+.mini-calendar {
+border-collapse: collapse;
+width: 100%;
+margin-bottom: 0.5rem;
+font-size: 0.95rem;
+background: #fff;
+border-radius: 0.5rem;
+box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.mini-calendar th, .mini-calendar td {
+width: 32px;
+height: 32px;
+text-align: center;
+border: 1px solid #e0e0e0;
+}
+
+.mini-calendar th {
+background: #f5f5f5;
+font-weight: 600;
+}
+
+.mini-calendar .highlight {
+    background: var(--calendar-highlight-bg);
+    color: var(--calendar-highlight-color);
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    line-height: 32px;
+}
+
+:root {
+    --checkmark-bg: #1976d2; /* Default blue */
+}
+body.dark-mode {
+    --checkmark-bg: #8ab4f8;
+}
+body.warm-mode {
+    --checkmark-bg: #ff9800;
+}
+body.red-mode {
+    --checkmark-bg: #b71c1c;
+}
+body.green-mode {
+    --checkmark-bg: #2e7d32;
+}
+body.purple-mode {
+    --checkmark-bg: #6a1b9a;
+}
+body.deep-blue-mode {
+    --checkmark-bg: #0d47a1;
+}

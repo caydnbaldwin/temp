@@ -1,0 +1,79 @@
+.chatbot-container {
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 900px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.chatbot-container iframe {
+    border-radius: 0.7rem;
+    background: #fff;
+}
+
+body.dark-mode .chatbot-container {
+    background: #343a40;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+body.warm-mode .chatbot-container {
+    background: #ffecb3;
+}
+
+body.red-mode .chatbot-container {
+    background: #ffebee;
+}
+
+body.green-mode .chatbot-container {
+    background: #e8f5e9;
+}
+
+body.purple-mode .chatbot-container {
+    background: #f3e5f5;
+}
+
+body.deep-blue-mode .chatbot-container {
+    background: #e3f2fd;
+}
+
+/* Google Wallet style payment success overlay */
+.payment-success-overlay {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    top: 0; left: 0; right: 0; bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(40, 40, 40, 0.18);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s;
+}
+
+.payment-success-overlay.active {
+    display: flex;
+    opacity: 1;
+}
+
+.checkmark-circle {
+    background: var(--checkmark-bg);
+    border-radius: 50%;
+    width: 110px;
+    height: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 6px 32px rgba(67,160,71,0.18);
+    animation: pop-in 0.3s cubic-bezier(.68,-0.55,.27,1.55);
+}
+
+@keyframes pop-in {
+    0% { transform: scale(0.7); opacity: 0; }
+    80% { transform: scale(1.1); opacity: 1; }
+    100% { transform: scale(1); }
+}

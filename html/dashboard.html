@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/medical-friend.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body>
+    <header>
+        <nav>
+        <ul>
+            <li><a href="home.html"><span class="brand-title">Your Health Tracker</span></a></li>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <!-- Empathetic language -->
+            <li><a href="medical-friend.html">Medical Friend</a></li>
+        </ul>
+        </nav>
+        <div class="profile" id="profileToggle">
+        <img src="../sources/images.jpeg" alt="User Profile Picture">
+        <span id="profilePicture-firstName"></span>
+        </div>
+    </header>
+
+    <div class="hero-container">
+        <section class="suggestions-section">
+            <!-- Personalized dashboard with specific helpful information -->
+            <h2>Dashboard</h2>
+            <div class="suggestions-list" style="display:flex; flex-direction:column; gap:1.5rem;">
+                <div class="suggestion" style="padding:1.2rem; border-radius:0.7em;">
+                    <strong>Balance Due</strong>
+                    <div style="background:#fff; border-radius:0.5em; box-shadow:0 2px 8px rgba(0,0,0,0.04); padding:1rem; margin-top:0.75rem;">
+                        <ul style="list-style:none; padding:0; margin:0 0 0;">
+                            <li style="display:flex; padding:0.25rem 0; border-bottom:1px solid #eee;">
+                                <span style="flex:1.3; min-width:100px; border-right:1px solid #e0e0e0; padding-right:0.75em;">05/10/2025</span>
+                                <span style="flex:2; text-align:left; min-width:120px; border-right:1px solid #e0e0e0; padding:0 0.5em;">Office Visit</span>
+                                <span style="flex:1; text-align:right; min-width:60px; padding-left:0.5em;">$40.00</span>
+                            </li>
+                            <li style="display:flex; padding:0.25rem 0; border-bottom:1px solid #eee;">
+                                <span style="flex:1.3; min-width:100px; border-right:1px solid #e0e0e0; padding-right:0.75em;">05/10/2025</span>
+                                <span style="flex:2; text-align:left; min-width:120px; border-right:1px solid #e0e0e0; padding:0 0.5em;">Lab Work</span>
+                                <span style="flex:1; text-align:right; min-width:60px; padding-left:0.5em;">$25.00</span>
+                            </li>
+                            <li style="display:flex; padding:0.25rem 0; border-bottom:1px solid #eee;">
+                                <span style="flex:1.3; min-width:100px; border-right:1px solid #e0e0e0; padding-right:0.75em;">05/11/2025</span>
+                                <span style="flex:2; text-align:left; min-width:120px; border-right:1px solid #e0e0e0; padding:0 0.5em;">Prescription</span>
+                                <span style="flex:1; text-align:right; min-width:60px; padding-left:0.5em;">$15.00</span>
+                            </li>
+                            <li style="display:flex; justify-content:space-between; padding:0.25rem 0; border-bottom:1px solid #eee;">
+                                <strong>Total Due</strong>
+                                <span> $80.00</span>
+                            </li>
+                        </ul>
+                        <div style="display:flex; justify-content:space-between; align-items:center; margin-top:0.75rem; position:relative;">
+                            <button class="pay-due-btn" id="payDueBtn" style="margin-left:1rem; width:100%;">Pay Dues</button>
+                            <span id="paySuccessCheck" style="display:none; position:absolute; right:1.5rem; top:50%; transform:translateY(-50%); font-size:2rem; color:#43a047;">
+                                &#10003;
+                            </span>
+                        </div>
+                    </div><br>
+                    <p>You have several unpaid dues. We understand that this can be overwhelming. Would you like to speak with a <strong>financial advisor</strong>?</p>
+                </div>
+
+                <div class="suggestion">
+                    <strong>Medical Information</strong>
+                    <p>Dr. Pearson prescribed onyxatol in June. Let us know how well it is working!</p>
+                    <div class="scale-container">
+                        <div class="scale">
+                            <div class="scale-bubble" data-value="1">1</div>
+                            <div class="scale-line"></div>
+                            <div class="scale-bubble" data-value="2">2</div>
+                            <div class="scale-line"></div>
+                            <div class="scale-bubble" data-value="3">3</div>
+                            <div class="scale-line"></div>
+                            <div class="scale-bubble" data-value="4">4</div>
+                            <div class="scale-line"></div>
+                            <div class="scale-bubble" data-value="5">5</div>
+                            <div class="scale-line"></div>
+                            <div class="scale-bubble" data-value="6">6</div>
+                            <div class="scale-line"></div>
+                            <div class="scale-bubble" data-value="7">7</div>
+                        </div><br>
+                    </div>
+                </div>
+
+                <div class="suggestion">
+                    <strong>Next Appointment</strong>
+
+                    <p id="appointmentText"></p>
+                    <div style="margin-bottom:1rem;">
+                        <table class="mini-calendar" id="miniCalendar">
+                            <thead>
+                                <tr class="mini-calendar-caption-row" style="margin-bottom:0.25rem;">
+                                    <th colspan="7" id="calendarMonthYear"></th>
+                                </tr>
+                                <tr>
+                                    <th>Su</th><th>Mo</th><th>Tu</th><th>We</th><th>Th</th><th>Fr</th><th>Sa</th>
+                                </tr>
+                            </thead>
+                            <tbody id="calendarBody">
+                                <!-- Calendar days will be injected here -->
+                            </tbody>
+                        </table>
+                    </div>
+                    <p>You've had frequent appointments with Dr. Pearson. Have you considered <strong>meeting with a specialist?</strong></p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Side Menu -->
+    <div class="overlay" id="overlay"></div>
+    <div class="side-menu" id="sideMenu">
+        <button class="close-btn" id="closeBtn">&times;</button>
+        <div class="side-menu-header">
+            <img src="../sources/images.jpeg" alt="User Profile Picture">
+            <div class="user-info">
+                <h3></h3>
+                <p></p>
+            </div>
+        </div>
+        <ul class="side-menu-items">
+            <li><a href="../html/profile.html">Profile Settings</a></li>
+            <li class="menu-item-with-dropdown">
+                <a href="#" id="customizationToggle" class="dropdown-toggle">Customization</a>
+                <div class="customization-dropdown" id="customizationDropdown">
+                    <div class="customization-section">
+                        <h4>Color Scheme</h4>
+                        <div class="color-schemes">
+                            <button class="color-scheme-btn default-scheme" data-scheme="default" title="Default"></button>
+                            <button class="color-scheme-btn dark-scheme" data-scheme="dark-mode" title="Dark Mode"></button>
+                            <button class="color-scheme-btn warm-scheme" data-scheme="warm-mode" title="Warm Mode"></button>
+                            <button class="color-scheme-btn red-scheme" data-scheme="red-mode" title="Red Theme"></button>
+                            <button class="color-scheme-btn green-scheme" data-scheme="green-mode" title="Green Theme"></button>
+                            <button class="color-scheme-btn purple-scheme" data-scheme="purple-mode" title="Purple Theme"></button>
+                            <button class="color-scheme-btn deep-blue-scheme" data-scheme="deep-blue-mode" title="Deep Blue Theme"></button>
+                        </div>
+                    </div>
+                    <div class="customization-section">
+                        <h4>Font Size</h4>
+                        <div class="font-size-control">
+                            <div class="slider-container">
+                                <span>A-</span>
+                                <input type="range" id="fontSizeSlider" min="75" max="150" value="100" step="5">
+                                <span>A+</span>
+                                <span id="fontSizeValue" class="font-size-value">100%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li><a href="#">Help & Support</a></li>
+        </ul>
+    </div>
+
+    <!-- Confirmation overlay for payment success -->
+    <div id="paymentSuccessOverlay" class="payment-success-overlay">
+        <div class="checkmark-circle">
+            <svg width="80" height="80" viewBox="0 0 80 80">
+                <circle cx="40" cy="40" r="38" fill="var(--checkmark-bg)"/>
+                <polyline points="25,43 37,55 57,33" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+    </div>
+
+    <script src="../js/home.js"></script>
+    <script src="../js/dashboard.js"></script>
+</body>
+</html>

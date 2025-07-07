@@ -4,20 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="index.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/index.css">
 </head>
-<body class="comfortaa-custom">
-    <div class="component">
-        <form action="">
-            <h1 class="comfortaa-custom">Login</h1>
-            <input class="comfortaa-custom" type="text" name="username" placeholder="Username" required>
-            <input class="comfortaa-custom" type="password" name="password" placeholder="Password" required>
-            <button class="comfortaa-custom">Submit</button>
-        </form>
-        <p><a href="views/signup/index.html">Don't have an account?</a></p>
-    </div>
+<body>
+    <form id="loginForm" action="">
+        <h1>Login</h1>
+        <div class="input-group">
+            <input type="text" id="firstName" name="firstName" placeholder="First Name" required>
+        </div>
+        <div class="input-group">
+            <input type="password" id="password" name="password" placeholder="Password" required>
+        </div>
+        <button type="submit">Login</button>
+    </form>
+    <script src="js/index.js"></script>
 </body>
 </html>

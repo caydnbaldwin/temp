@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/home.css">
+</head>
+<body>
+    <header>
+        <nav>
+        <ul>
+            <li><a href="home.html"><span class="brand-title">Your Health Tracker</span></a></li>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <!-- Empathetic language -->
+            <li><a href="medical-friend.html">Medical Friend</a></li>
+        </ul>
+        </nav>
+        <div class="profile" id="profileToggle">
+        <img src="../sources/images.jpeg" alt="User Profile Picture">
+        <span id="profilePicture-firstName"></span>
+        </div>
+    </header>
+
+    <div class="chatbot-container">
+        <iframe
+            src="https://www.chatbase.co/chatbot-iframe/ILjdWx5EGujXsAyHnSZZI"
+            width="100%"
+            style="height: 100%; min-height: 700px; width: 50%; margin: 0 auto; display: block; border: none; border-radius: 16px; overflow: hidden;"
+            frameborder="0"
+            allow="clipboard-write"
+        ></iframe>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+    <div class="side-menu" id="sideMenu">
+        <button class="close-btn" id="closeBtn">&times;</button>
+        <div class="side-menu-header">
+            <img src="../sources/images.jpeg" alt="User Profile Picture">
+            <div class="user-info">
+                <h3></h3>
+                <p></p>
+            </div>
+        </div>
+        <ul class="side-menu-items">
+            <li><a href="../html/profile.html">Profile Settings</a></li>
+            <li class="menu-item-with-dropdown">
+                <a href="#" id="customizationToggle" class="dropdown-toggle">Customization</a>
+                <div class="customization-dropdown" id="customizationDropdown">
+                    <div class="customization-section">
+                        <h4>Color Scheme</h4>
+                        <div class="color-schemes">
+                            <button class="color-scheme-btn default-scheme" data-scheme="default" title="Default"></button>
+                            <button class="color-scheme-btn dark-scheme" data-scheme="dark-mode" title="Dark Mode"></button>
+                            <button class="color-scheme-btn warm-scheme" data-scheme="warm-mode" title="Warm Mode"></button>
+                            <button class="color-scheme-btn red-scheme" data-scheme="red-mode" title="Red Theme"></button>
+                            <button class="color-scheme-btn green-scheme" data-scheme="green-mode" title="Green Theme"></button>
+                            <button class="color-scheme-btn purple-scheme" data-scheme="purple-mode" title="Purple Theme"></button>
+                            <button class="color-scheme-btn deep-blue-scheme" data-scheme="deep-blue-mode" title="Deep Blue Theme"></button>
+                        </div>
+                    </div>
+                    <div class="customization-section">
+                        <h4>Font Size</h4>
+                        <div class="font-size-control">
+                            <div class="slider-container">
+                                <span>A-</span>
+                                <input type="range" id="fontSizeSlider" min="75" max="150" value="100" step="5">
+                                <span>A+</span>
+                                <span id="fontSizeValue" class="font-size-value">100%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li><a href="#">Help & Support</a></li>
+        </ul>
+    </div>
+    <script src="../js/home.js"></script>
+    <script src="../js/medical-friend.js"></script>
+</body>
+</html>
